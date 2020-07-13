@@ -1,3 +1,5 @@
+#used for finding HSV color ranges/creating masks for color detection in openCV
+
 import cv2
 import numpy as np
 
