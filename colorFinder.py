@@ -23,18 +23,18 @@ def track_bars():
 def color_values(frame, win_name='Color Track'):
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     blur = cv2.GaussianBlur(hsv, (5, 5), 0)
-    if trackbar:
-        h_min = cv2.getTrackbarPos("Hue min", win_name)
-        h_max = cv2.getTrackbarPos("Hue max", win_name)
 
-        s_min = cv2.getTrackbarPos("Sat min", win_name)
-        s_max = cv2.getTrackbarPos("Sat max", win_name)
+    h_min = cv2.getTrackbarPos("Hue min", win_name)
+    h_max = cv2.getTrackbarPos("Hue max", win_name)
 
-        v_min = cv2.getTrackbarPos("Val min", win_name)
-        v_max = cv2.getTrackbarPos("Val max", win_name)
+    s_min = cv2.getTrackbarPos("Sat min", win_name)
+    s_max = cv2.getTrackbarPos("Sat max", win_name)
 
-        lower = np.array([h_min, s_min, v_min])
-        upper = np.array([h_max, s_max, v_max])
+    v_min = cv2.getTrackbarPos("Val min", win_name)
+    v_max = cv2.getTrackbarPos("Val max", win_name)
+
+    lower = np.array([h_min, s_min, v_min])
+    upper = np.array([h_max, s_max, v_max])
 
     return cv2.inRange(blur, lower, upper)  # Returns mask
 
