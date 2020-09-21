@@ -142,10 +142,6 @@ class C4:
         print("Successful exit")
 
 
-def main():
+if __name__ == "__main__":
     b = C4()
     b.play()
-
-
-if __name__ == "__main__":
-    main()
