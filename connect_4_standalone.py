@@ -1,4 +1,5 @@
 # Simple connect 4 game
+# This version requires 2 human players
 
 class C4:
     def __init__(self):
